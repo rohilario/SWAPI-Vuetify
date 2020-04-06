@@ -31,7 +31,7 @@ export default {
     
     
 },
-  name: 'Page1',
+  name: 'Index',
   data () {
     return {
       
