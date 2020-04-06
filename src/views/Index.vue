@@ -7,14 +7,11 @@
         <div class="content">
           <div class="container-fluid">
             <div class="row">
-              <br>
-              <ul>
-                <li>Morbi in sem quis dui placerat ornare. Pellentesque odio nisi, euismod in, pharetra a, ultricies in, diam. Sed arcu. Cras consequat.Sed arcu. Cras consequat.Sed arcu. Cras consequat.Sed arcu. Cras consequat.Sed arcu. Cras consequat.Sed arcu. Cras consequat.Sed arcu. Cras consequat.Sed arcu. Cras consequat.Sed arcu. Cras consequat.Sed arcu. Cras consequat.Sed arcu. Cras consequat.Sed arcu. Cras consequat.Sed arcu. Cras consequat.Sed arcu. Cras consequat.Sed arcu. Cras consequat.Sed arcu. Cras consequat.</li>
-                <li>Praesent dapibus, neque id cursus faucibus, tortor neque egestas augue, eu vulputate magna eros eu erat. Aliquam erat volutpat. Nam dui mi, tincidunt quis, accumsan porttitor, facilisis luctus, metus.</li>
-                <li>Phasellus ultrices nulla quis nibh. Quisque a lectus. Donec consectetuer ligula vulputate sem tristique cursus. Nam nulla quam, gravida non, commodo a, sodales sit amet, nisi.</li>
-                <li>Pellentesque fermentum dolor. Aliquam quam lectus, facilisis auctor, ultrices ut, elementum vulputate, nunc.</li>
-              </ul>
-            
+              <md-card class="card-default">
+                <h2>{{titulo}}</h2>
+                <img class="imagem-quadrinho" :src="imagem"/>
+                <p>{{descricao}}</p>
+              </md-card>
             </div>
           </div>
         </div>
@@ -26,21 +23,36 @@
 <script>
 
 
+
 export default {
   components:{
-    
     
 },
   name: 'Index',
   data () {
     return {
       
+      props: {
+        imagem: {
+            type: String
+        },
+        titulo: {
+            type: String,
+            required: true
+        },
+        descricao: {
+            type: String
+        }
+    }
     }
   }
 }
+
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
 
 </style>
+
+
