@@ -18,29 +18,25 @@
     <!-- Provides the application the proper gutter -->
     <v-container fluid>
 
-      <Index>
-        
-    
-      </Index>
-
-      <router-view></router-view>
+      <router-view name="index"></router-view>
+      <router-view name="planetas"></router-view>
       
     </v-container>
+      <v-footer 
+        color="primary lighten-1"
+        padless
+        
+        >
+        <Footer></Footer>
+      </v-footer>
   </v-content>
-
-    <v-footer app
-    color="primary lighten-1"
-    padless
-  >
-    <Footer></Footer>
-  </v-footer>
 </v-app>
 </template>
 
 <script>
 import Footer from './components/layout/Footer'
 import Asside from './components/layout/Asside'
-import Index from './views/Index'
+//import Index from './views/Index'
 import NavBar from './components/layout/NavBar'
 //import SWAPI from '@/services/SWAPI';
 
@@ -51,7 +47,7 @@ export default {
     Footer,
     Asside,
     NavBar,
-    Index
+//    Index
   },
 
   data: () => ({

@@ -2,6 +2,12 @@ import axios from 'axios';
 const urlBase = 'https://swapi.co/api/';
 
 export default {
+
+    headers: {
+        'Authorization': 'Basic Y2xpZW50OnNlY3JldA==',
+        'Content-Type': 'application/x-www-form-urlencoded'
+    },
+
     getAllPlanets: (callback) => {
         const urlPlanets = urlBase + 'planets/';
         console.log(urlPlanets)
@@ -14,7 +20,6 @@ export default {
             
         })
     },
-
     getMenu: (callback) => {
         const urlMenu = urlBase;
         console.log(urlMenu)
