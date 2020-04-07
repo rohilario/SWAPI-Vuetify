@@ -19,14 +19,9 @@
     <v-container fluid>
 
       <Index>
-        <div class="md-layout-item md-size-33" v-for="conteudo in conteudo" :key="conteudo.id">
-      <quadrinho
-        :titulo="conteudo.count"
-        :descricao="conteudo.description"
-      >
-    </quadrinho>
-        </div>
-    </Index>
+        
+    
+      </Index>
 
       <router-view></router-view>
       
@@ -47,7 +42,7 @@ import Footer from './components/layout/Footer'
 import Asside from './components/layout/Asside'
 import Index from './views/Index'
 import NavBar from './components/layout/NavBar'
-import SWAPI from '@/services/SWAPI';
+//import SWAPI from '@/services/SWAPI';
 
 export default {
   
@@ -60,13 +55,8 @@ export default {
   },
 
   data: () => ({
-      conteudo: []
+      
   }),
-created() {
-    SWAPI.getAllComics(comics => {
-      this.conteudo = comics.data;
-    })
-  }
 
 };
 </script>

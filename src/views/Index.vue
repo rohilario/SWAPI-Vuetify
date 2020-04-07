@@ -7,11 +7,16 @@
         <div class="content">
           <div class="container-fluid">
             <div class="row">
-              <md-card class="card-default">
-                <h2>{{titulo}}</h2>
-                <img class="imagem-quadrinho" :src="imagem"/>
-                <p>{{descricao}}</p>
-              </md-card>
+              
+              <v-data-table
+                :headers="headers"
+                :items="desserts"
+                :items-per-page="5"
+                class="elevation-1"
+              ></v-data-table>
+                <tr v-for="conteudo in conteudo" v-bind:key="conteudo.id">
+                  <td>{{ conteudo.name }}</td>
+                </tr>
             </div>
           </div>
         </div>
@@ -21,32 +26,52 @@
 </template>
 
 <script>
-
-
+import SWAPI from '@/services/SWAPI';
 
 export default {
+  
+  name: 'App',
   components:{
-    
-},
-  name: 'Index',
-  data () {
-    return {
+  
+
+  },
+
+  data: () => ({
+      conteudo: [],
       
-      props: {
-        imagem: {
-            type: String
-        },
-        titulo: {
-            type: String,
-            required: true
-        },
-        descricao: {
-            type: String
-        }
-    }
-    }
+        headers: [
+          {
+            text: 'Dessert (100000g serving)',
+            align: 'start',
+            sortable: false,
+            value: 'name',
+          },
+          {
+            text: 'Dessert (100000g serving)',
+            align: 'start',
+            sortable: false,
+            value: 'rotation_period',
+          },
+         
+        ],
+        desserts: [
+          
+        ],
+      
+      
+  }),
+ 
+created() {
+    SWAPI.getAllPlanets(planets => {
+      this.conteudo = planets.data.results;
+      this.desserts = planets.data.results;
+      
+      console.log(planets.data.results);
+    })
   }
-}
+
+};
+
 
 </script>
 
@@ -54,5 +79,10 @@ export default {
 <style scoped>
 
 </style>
+
+
+
+
+
 
 

@@ -2,13 +2,13 @@ import axios from 'axios';
 const urlBase = 'https://swapi.co/api/';
 
 export default {
-    getAllComics: (callback) => {
-        const urlComics = urlBase + 'planets/';
-        console.log(urlComics)
-        axios.get(urlComics).then((comics) => {
-            console.log(comics.data)
+    getAllPlanets: (callback) => {
+        const urlPlanets = urlBase + 'planets/';
+        console.log(urlPlanets)
+        axios.get(urlPlanets).then((planets) => {
+            //console.log(comics.data)
             if (callback) {
-                callback(comics);
+                callback(planets);
                 
             }
             
