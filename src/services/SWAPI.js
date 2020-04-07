@@ -13,5 +13,17 @@ export default {
             }
             
         })
+    },
+
+    getMenu: (callback) => {
+        const urlMenu = urlBase;
+        console.log(urlMenu)
+        axios.get(urlMenu).then((menu) => {   
+            if (callback) {
+                callback(menu);
+                
+            }
+            
+        })
     }
 }

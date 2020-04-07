@@ -27,11 +27,11 @@
       <v-list dense>
         <v-list-item
           v-for="item in items"
-          :key="item.title"
+          :key="item.id"
           link
         >
           <v-list-item-icon>
-            <v-icon>{{ item.icon }}</v-icon>
+            <v-icon>      {{item.icon}}      </v-icon>
           </v-list-item-icon>
 
           <v-list-item-content>
@@ -44,19 +44,26 @@
 </template>
 
 <script>
+
   export default {
+      
       name:'Asside',
-    data () {
-      return {
+    data: () => ({
+        
+        
         drawer: true,
-        items: [
-          { title: 'Home', icon: 'mdi-home-city' },
-          { title: 'My Account', icon: 'mdi-account' },
-          { title: 'Users', icon: 'mdi-account-group-outline' },
-        ],
+            items: [
+            { title: 'Pessoas', icon: 'mdi-home-city' },
+            { title: 'Planetas', icon: 'mdi-account' },
+            { title: 'Filmes', icon: 'mdi-account-group-outline' },
+            { title: 'Especies', icon: 'mdi-account-group-outline' },
+            { title: 'Veiculos', icon: 'mdi-account-group-outline' },
+            { title: 'Naves Espaciais', icon: 'mdi-account-group-outline' },
+            
+            ],
         mini: false,
-      }
-    },
-  }
+      
+    })
+  
+}
 </script>
-John Leider

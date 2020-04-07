@@ -41,13 +41,13 @@ export default {
       
         headers: [
           {
-            text: 'Dessert (100000g serving)',
+            text: 'Nome do Planeta',
             align: 'start',
             sortable: false,
             value: 'name',
           },
           {
-            text: 'Dessert (100000g serving)',
+            text: 'Rotacao em Horas',
             align: 'start',
             sortable: false,
             value: 'rotation_period',
@@ -61,14 +61,14 @@ export default {
       
   }),
  
-created() {
-    SWAPI.getAllPlanets(planets => {
-      this.conteudo = planets.data.results;
-      this.desserts = planets.data.results;
-      
-      console.log(planets.data.results);
-    })
-  }
+        created() {
+            SWAPI.getAllPlanets(planets => {
+              this.conteudo = planets.data.results;
+              this.desserts = planets.data.results;
+              
+              console.log(planets.data.results);
+            })
+          }
 
 };
 
