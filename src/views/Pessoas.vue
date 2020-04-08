@@ -17,7 +17,7 @@
                 tile
                 >
                 <v-card-title>
-                      Planetas
+                      Pessoas
                       <v-spacer></v-spacer>
                       <v-text-field
                         v-model="search"
@@ -37,7 +37,6 @@
                       :items-per-page="5"
                       multi-sort
                       class="elevation-1"
-                      loading
                       >
                     </v-data-table> 
               </v-card>         
@@ -67,62 +66,22 @@ export default {
             sortable: true,
             value: 'name',
           },
-          {
-            text: 'Rotacao em Horas',
-            align: 'start',
-            sortable: true,
-            value: 'rotation_period',
-          },
-         {
-            text: 'Periodo Orbital',
-            align: 'start',
-            sortable: true,
-            value: 'orbital_period',
-          },
-          {
-            text: 'Gravidade',
-            align: 'start',
-            sortable: true,
-            value: 'gravity',
-          },
-          {
-            text: 'Terreno do Planeta',
-            align: 'start',
-            sortable: true,
-            value: 'terrain',
-          },
-          {
-            text: '%AGUA VS TERRENO',
-            align: 'start',
-            sortable: true,
-            value: 'surface_water',
-          },
-          {
-            text: 'POPULACAO',
-            align: 'start',
-            sortable: true,
-            value: 'population',
-          },
         ],
-        
       }
   },
         created() {
-            SWAPI.getAllPlanets(planets => {
-              this.conteudo = planets.data.results;
-              this.desserts = planets.data.results;
-              console.log(planets.data.results);
+            SWAPI.getPeoples(pessoas => {
+              this.conteudo = pessoas.data.results;
+              this.desserts = pessoas.data.results;
+              console.log(pessoas.data.results);
             })
           },
 
-  name: 'planetas',
+  name: 'pessoas',
   components:{
 
   }
 }
-
-
-
 
 </script>
 
@@ -130,11 +89,3 @@ export default {
 <style scoped>
 
 </style>
-
-
-
-
-
-
-
-

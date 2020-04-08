@@ -1,8 +1,9 @@
 import Router from 'vue-router'
 import Vue from 'vue'
-import Planetas from './views/Planetas.vue'
-//import Page2 from './views/Page2.vue
-import Index from './views/Index.vue'
+import Planetas from './views/Planetas'
+import Pessoas from './views/Pessoas'
+import Filmes from './views/Filmes'
+import Index from './views/Index'
 
 Vue.use(Router)
     
@@ -19,6 +20,16 @@ export default new Router({
             path:'/planetas',
             
             components:{'planetas': Planetas},
+        },
+        {
+            path:'/pessoas',
+            
+            components:{'pessoas': Pessoas},
+        },
+        {
+            path:'/filmes',
+            
+            components:{'filmes': Filmes},
         }
     ]
 })

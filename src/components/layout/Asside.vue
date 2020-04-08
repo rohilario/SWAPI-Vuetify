@@ -6,6 +6,7 @@
       app
         >
     <v-card>
+        
         <v-list-item class="px-2">
             <v-list-item-avatar>
             <v-img src="https://randomuser.me/api/portraits/men/85.jpg"></v-img>
@@ -29,11 +30,12 @@
                         v-for="item in items"
                         :key="item.id"
                         link
+                        :to="item.link"
                         >
                         <v-list-item-icon>
                             <v-icon>      {{item.icon}}      </v-icon>
                         </v-list-item-icon>
-
+                        
                         <v-list-item-content>
                             <v-list-item-title>{{ item.title }}</v-list-item-title>
                         </v-list-item-content>
@@ -73,12 +75,12 @@
         
         drawer: true,
             items: [
-            { title: 'Pessoas', icon: 'mdi-account-box' },
-            { title: 'Planetas', icon: 'mdi-compass' },
-            { title: 'Filmes', icon: 'mdi-filmstrip' },
-            { title: 'Especies', icon: 'mdi-linux' },
-            { title: 'Veiculos', icon: 'mdi-forklift' },
-            { title: 'Naves Espaciais', icon: 'mdi-rocket' },
+            { title: 'Pessoas', icon: 'mdi-account-box', link:'/pessoas' },
+            { title: 'Planetas', icon: 'mdi-compass',link:'/planetas' },
+            { title: 'Filmes', icon: 'mdi-filmstrip' ,link:'/filmes'},
+            { title: 'Especies', icon: 'mdi-linux',link:'/especies' },
+            { title: 'Veiculos', icon: 'mdi-forklift',link:'veiculos' },
+            { title: 'Naves Espaciais', icon: 'mdi-rocket',link:'/naves_espaciais' },
             
             ],
         mini: false,

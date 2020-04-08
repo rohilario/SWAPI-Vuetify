@@ -20,6 +20,8 @@
 
       <router-view name="index"></router-view>
       <router-view name="planetas"></router-view>
+      <router-view name="pessoas"></router-view>
+      <router-view name="filmes"></router-view>
       
     </v-container>
       <v-footer 

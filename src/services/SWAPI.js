@@ -30,5 +30,25 @@ export default {
             }
             
         })
+    },
+    getPeoples: (callback) => {
+        const urlPeople = urlBase + 'people/';
+        console.log(urlPeople)
+        axios.get(urlPeople).then((people) => {   
+            if (callback) {
+                callback(people);
+            }
+            
+        })
+    },
+    getFilms: (callback) => {
+        const urlFilms = urlBase + 'films/';
+        console.log(urlFilms)
+        axios.get(urlFilms).then((films) => {   
+            if (callback) {
+                callback(films);
+            }
+            
+        })
     }
 }
