@@ -3,6 +3,7 @@ import Vue from 'vue'
 import Planetas from './views/Planetas'
 import Pessoas from './views/Pessoas'
 import Filmes from './views/Filmes'
+import Especies from './views/Especies'
 import Index from './views/Index'
 
 Vue.use(Router)
@@ -30,6 +31,12 @@ export default new Router({
             path:'/filmes',
             
             components:{'filmes': Filmes},
+        },
+        {
+            path:'/especies',
+            
+            components:{'especies': Especies},
         }
+        
     ]
 })
