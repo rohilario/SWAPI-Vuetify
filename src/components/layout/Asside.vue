@@ -1,12 +1,7 @@
 <template>
 
     <v-card>
-        <v-navigation-drawer
-      expand-on-hover
-      app
-      dark
-      src="https://cdn.vuetifyjs.com/images/backgrounds/bg-2.jpg"
-         >        
+            
         <v-list-item class="px-2">
             <v-list-item-avatar>
             <v-img src="https://randomuser.me/api/portraits/men/85.jpg"></v-img>
@@ -44,7 +39,6 @@
           <v-btn class="px-2">Logout</v-btn>
         </div>
       </template>
-</v-navigation-drawer>
 </v-card>
 </template>
 

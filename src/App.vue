@@ -2,16 +2,29 @@
 <!-- App.vue -->
 
 <v-app>
+  <v-navigation-drawer
+    app
+      expand-on-hover
+      clipped
+      dark
+      src="https://cdn.vuetifyjs.com/images/backgrounds/bg-2.jpg"
+         >
+    <Asside></Asside>     
+  </v-navigation-drawer>
+      <v-navigation-drawer
+      clipped
+      dark
+      right
+      >
+      </v-navigation-drawer>
       <v-app-bar app
+      clipped-left
       color="blue"
       dense
-      
       class="d-flex justify-center align-center mb-6"
       >
     <nav-bar></nav-bar>
       </v-app-bar>
-    
-    <Asside></Asside>
 
   <!-- Sizes your content based upon application components -->
   <v-content>

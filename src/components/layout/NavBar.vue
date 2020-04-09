@@ -1,8 +1,8 @@
 <template>
     <div>
         <v-card
-            class="d-flex"
-            
+class="d-flex justify-center align-center mb-6"
+            color="grey lighten-2"
             flat
             tile
             >
