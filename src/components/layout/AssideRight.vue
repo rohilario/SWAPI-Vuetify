@@ -1,10 +1,6 @@
 <template>
-  <v-card height="350px">
-    <v-navigation-drawer
-      absolute
-      permanent
-      right
-    >
+  <v-card height="400px">
+    
       <template v-slot:prepend>
         <v-list-item two-line>
           <v-list-item-avatar>
@@ -24,7 +20,7 @@
         <v-list-item
           v-for="item in items"
           :key="item.title"
-          @click=""
+          @click="sdsdsd"
         >
           <v-list-item-icon>
             <v-icon>{{ item.icon }}</v-icon>
@@ -35,7 +31,6 @@
           </v-list-item-content>
         </v-list-item>
       </v-list>
-    </v-navigation-drawer>
   </v-card>
 </template>
 
@@ -43,11 +38,15 @@
 
   export default {
       
-      name:'AssideRight',
-    data: () => ({
-    
-      
-    })
-  
+    name:'AssideRight',
+    data () {
+      return {
+        items: [
+          { title: 'Home', icon: 'mdi-home-city' },
+          { title: 'My Account', icon: 'mdi-account' },
+          { title: 'Users', icon: 'mdi-account-group-outline' },
+        ],
+      }
+    },
 }
 </script>

@@ -6,7 +6,6 @@
             <v-col
               sm="8"
             >
-
               <v-card
                 class="pa-2"
                 outlined

@@ -2,35 +2,35 @@
 <!-- App.vue -->
 
 <v-app>
-  <v-navigation-drawer
-    app
-      expand-on-hover
-      clipped
-      dark
-      src="https://cdn.vuetifyjs.com/images/backgrounds/bg-2.jpg"
-         >
-    <Asside></Asside>     
-  </v-navigation-drawer>
-      <v-navigation-drawer
-      clipped
-      dark
-      right
-      >
-      </v-navigation-drawer>
-      <v-app-bar app
+  <v-app-bar app
       clipped-left
-      color="blue"
+      dark
       dense
       class="d-flex justify-center align-center mb-6"
       >
     <nav-bar></nav-bar>
       </v-app-bar>
+  <v-layout fill-height>
+  <v-navigation-drawer
+    app
+      expand-on-hover
+      clipped
+      dark
+         >
+    <Asside></Asside>     
+  </v-navigation-drawer>
+  <v-navigation-drawer
+      dark
+      >
+        <AssideRight></AssideRight>
+  </v-navigation-drawer>
+      
 
   <!-- Sizes your content based upon application components -->
   <v-content>
 
     <!-- Provides the application the proper gutter -->
-    <v-container fluid>
+    <v-container>
 
       <router-view name="index"></router-view>
       <router-view name="planetas"></router-view>
@@ -39,13 +39,14 @@
       <router-view name="especies"></router-view>
       
     </v-container>
-      <v-footer 
+  </v-content>
+  </v-layout>
+  <v-footer 
         color="primary lighten-1"
-        padless
+        
         >
         <Footer></Footer>
       </v-footer>
-  </v-content>
 </v-app>
 </template>
 
@@ -54,6 +55,7 @@ import Footer from './components/layout/Footer'
 import Asside from './components/layout/Asside'
 //import Index from './views/Index'
 import NavBar from './components/layout/NavBar'
+import AssideRight from './components/layout/AssideRight'
 //import SWAPI from '@/services/SWAPI';
 
 export default {
@@ -63,6 +65,7 @@ export default {
     Footer,
     Asside,
     NavBar,
+    AssideRight,
 //    Index
   },
 
@@ -72,3 +75,9 @@ export default {
 
 };
 </script>
+<style lang="scss" scoped>
+
+.v-content{
+  padding:48px 0px 0px 0px !important;
+  }
+</style>

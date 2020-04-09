@@ -1,5 +1,4 @@
 <template>
-  <div>
     <v-card>
       <v-responsive :aspect-ratio="16/9">
         <v-container class="grey lighten-5">
@@ -53,7 +52,6 @@
         </v-container>
       </v-responsive>
     </v-card>
-  </div>
 </template>
 
 <script>

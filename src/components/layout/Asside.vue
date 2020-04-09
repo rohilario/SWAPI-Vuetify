@@ -9,8 +9,9 @@
 
             <v-list-item-title>SWAPI</v-list-item-title>
         </v-list-item>
-
-            <v-divider></v-divider>
+                        <v-divider></v-divider>
+                        <v-divider></v-divider>
+                        <v-divider></v-divider>
         <v-list shaped>
             <v-subheader>MENU</v-subheader>
                 <v-list-item-group v-model="item" color="black">
@@ -34,11 +35,32 @@
                         <v-divider></v-divider>
                 </v-list-item-group>
         </v-list>
-        <template >
-        <div class="pa-2">
-          <v-btn class="px-2">Logout</v-btn>
-        </div>
-      </template>
+        <v-list shaped>
+                <v-list-item-group v-model="item2" color="black">
+                    <v-list-item>
+                        <v-list-item-icon>
+                            <v-icon>       {{'mdi-exit-to-app'}}     </v-icon>
+                        </v-list-item-icon>
+                        
+                        <v-list-item-content color="white">
+                            <v-list-item-title >SAIR</v-list-item-title>
+                        </v-list-item-content>
+                    </v-list-item>
+                    <v-list-item>
+                        <v-list-item-icon>
+                            <v-icon>       {{'mdi-memory'}}     </v-icon>
+                        </v-list-item-icon>
+                        
+                        <v-list-item-content color="white">
+                            <v-list-item-title>ABOUT</v-list-item-title>
+                        </v-list-item-content>
+                    </v-list-item>
+                    
+                        <v-divider></v-divider>
+                        <v-divider></v-divider>
+                        <v-divider></v-divider>
+                </v-list-item-group>
+        </v-list>
 </v-card>
 </template>
 

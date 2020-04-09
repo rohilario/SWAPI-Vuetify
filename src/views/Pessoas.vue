@@ -1,6 +1,6 @@
 <template>
-    <v-card>
-      <v-responsive :aspect-ratio="16/9">
+    
+      
         <v-container class="grey lighten-5">
           <v-row no-gutters>
             <v-col
@@ -43,8 +43,8 @@
             </v-col>
           </v-row>
         </v-container>
-      </v-responsive>
-    </v-card>
+      
+    
 </template>
 
 
