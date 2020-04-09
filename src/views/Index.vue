@@ -12,7 +12,11 @@
                 outlined
                 tile
               >
-                One of three columns
+                <line-chart
+                  v-if="loaded"
+                  :chartdata="chartdata"
+                  :options="options"
+                  />
               </v-card>        
             </v-col>
             <v-col
@@ -45,16 +49,39 @@
 </template>
 
 <script>
+import { Bar } from 'vue-chartjs'
+
+
+
 export default {
+  extends: Bar,
   components:{
-    
-    
+  
 },
   name: 'index',
   data () {
     return {
+      chartdata: {
+      labels: ['January', 'February'],
+      datasets: [
+        {
+          label: 'Data One',
+          backgroundColor: '#f87979',
+          data: [40, 20]
+        }
+      ]
+    },
+    options: {
+      responsive: true,
+      maintainAspectRatio: false
+    }
       
     }
+    
+  },
+  mounted(){
+    this.renderChart(this.chartdata, this.options)
+    this.renderChart(this.chartdata, this.options)
   }
 }
 </script>

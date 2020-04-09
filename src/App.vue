@@ -2,15 +2,16 @@
 <!-- App.vue -->
 
 <v-app>
-    <Asside></Asside>
-    <v-app-bar
-    app
-    clipped-left
-    color="red"
-    dense
-    >
+      <v-app-bar app
+      color="blue"
+      dense
+      
+      class="d-flex justify-center align-center mb-6"
+      >
     <nav-bar></nav-bar>
-    </v-app-bar>
+      </v-app-bar>
+    
+    <Asside></Asside>
 
   <!-- Sizes your content based upon application components -->
   <v-content>
@@ -28,7 +29,6 @@
       <v-footer 
         color="primary lighten-1"
         padless
-        
         >
         <Footer></Footer>
       </v-footer>

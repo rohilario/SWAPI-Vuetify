@@ -50,5 +50,15 @@ export default {
             }
             
         })
+    },
+    getEspecies: (callback) => {
+        const urlEspecies = urlBase + 'species/';
+        console.log(urlEspecies)
+        axios.get(urlEspecies).then((especies) => {   
+            if (callback) {
+                callback(especies);
+            }
+            
+        })
     }
 }
